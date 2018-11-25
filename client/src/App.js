@@ -69,8 +69,12 @@ class App extends Component {
   }
 
   _countCharacterFrequency(emailArr) {
+    //Step 1: Turn Array into one long string
     let giantEmailString = emailArr.join("");
-    console.log(giantEmailString);
+
+    //Step 2: Split string into characters
+    let characters = giantEmailString.split("");
+    console.log(characters);
   }
 }
 
