@@ -24,13 +24,21 @@ class AllUsers extends Component {
   }
 
   render() {
-    let onePerson = this.state.people.map(singlePerson => {
-      return <p>{singlePerson.display_name}</p>;
+    //Loops through people array and creates a component for each person
+    let everyPerson = this.state.people.map(singlePerson => {
+      return (
+        <OneUser
+          key={singlePerson.account.id}
+          userName={singlePerson.display_name}
+          jobTitle={singlePerson.title}
+          email={singlePerson.email_address}
+        />
+      );
     });
     return (
       <div>
         <h1>DISPLAYS ALL USERS</h1>
-        <p>{onePerson}</p>
+        <p>{everyPerson}</p>
       </div>
     );
   }
