@@ -10,9 +10,9 @@ class AllUsers extends Component {
   }
   componentDidMount() {
     axios
-      .get("/")
+      .get("/api")
       .then(res => {
-        console.log(res);
+        console.log(res.data.data);
       })
       .catch(err => {
         console.log(err);
