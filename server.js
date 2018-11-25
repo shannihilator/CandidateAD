@@ -15,7 +15,7 @@ const axios = require("axios");
 //  GET ALL USERS
 // ========================================================
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   axios
     .get("https://api.salesloft.com/v2/people.json", {
       headers: {
