@@ -5,6 +5,9 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
+//IMPORT AXIOS
+const axios = require("axios");
+
 //TEST
 app.get("/", (req, res) => {
   res.send("Homepage Works!");
