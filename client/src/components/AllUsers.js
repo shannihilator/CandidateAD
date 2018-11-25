@@ -8,11 +8,15 @@ class AllUsers extends Component {
       people: []
     };
   }
+  //Wait for data to come back from API before mounting and setting state
   componentDidMount() {
     axios
       .get("/api")
       .then(res => {
         console.log(res.data.data);
+        this.setState({
+          people: res.data.data
+        });
       })
       .catch(err => {
         console.log(err);
@@ -20,9 +24,13 @@ class AllUsers extends Component {
   }
 
   render() {
+    let onePerson = this.state.people.map(singlePerson => {
+      return <p>{singlePerson.display_name}</p>;
+    });
     return (
       <div>
         <h1>DISPLAYS ALL USERS</h1>
+        <p>{onePerson}</p>
       </div>
     );
   }
