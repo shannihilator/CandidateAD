@@ -14,7 +14,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      people: []
+      people: [],
+      emailFrequency: {}
     };
   }
   render() {
@@ -46,13 +47,24 @@ class App extends Component {
       .get("/api")
       .then(res => {
         // console.log(res.data.data);
+
         this.setState({
           people: res.data.data
         });
+        this._splitEmails(this.state.people);
       })
+
       .catch(err => {
         console.log(err);
       });
+  }
+
+  _splitEmails(peopleArr) {
+    let everyEmail = peopleArr.map(singleEmail => {
+      return singleEmail.email_address;
+    });
+    console.log(everyEmail);
+    return everyEmail;
   }
 }
 
