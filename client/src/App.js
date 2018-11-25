@@ -34,7 +34,13 @@ class App extends Component {
             exact
             path="/frequency"
             render={props => {
-              return <Frequency people={this.state.people} {...props} />;
+              return (
+                <Frequency
+                  people={this.state.people}
+                  emailFrequency={this.state.emailFrequency}
+                  {...props}
+                />
+              );
             }}
           />
         </div>
@@ -67,7 +73,7 @@ class App extends Component {
     console.log(everyEmail);
     return this._countCharacterFrequency(everyEmail);
   }
-
+  //Recieves the email array to find occurances of characters
   _countCharacterFrequency(emailArr) {
     //Step 1: Turn Array into one long string
     let giantEmailString = emailArr.join("");
@@ -92,7 +98,6 @@ class App extends Component {
     this.setState({
       emailFrequency: characterCount
     });
-    console.log(characterCount);
   }
 }
 
