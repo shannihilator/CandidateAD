@@ -22,7 +22,13 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navigation />
-          <Route exact path="/" component={AllUsers} />
+          <Route
+            exact
+            path="/"
+            render={props => {
+              return <AllUsers people={this.state.people} {...props} />;
+            }}
+          />
           <Route exact path="/frequency" component={Frequency} />
         </div>
       </Router>
