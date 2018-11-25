@@ -1,3 +1,6 @@
+//IMOPORT DOTENV FOR HIDDEN KEYS
+require("dotenv").config();
+
 //IMPORT EXPRESS
 const express = require("express");
 const app = express();
