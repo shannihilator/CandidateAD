@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import OneUser from "./OneUser";
+
 class AllUsers extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +39,10 @@ class AllUsers extends Component {
     });
     return (
       <div>
-        <h1>DISPLAYS ALL USERS</h1>
+        <h1> ALL USERS</h1>
+        <Link to={"/frequency"}>
+          <button>Get Frequency</button>
+        </Link>
         {everyPerson}
       </div>
     );

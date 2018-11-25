@@ -4,4 +4,5 @@
 
 .my-nav {
   display: flex;
+  outline: 1px royalblue solid;
 }
