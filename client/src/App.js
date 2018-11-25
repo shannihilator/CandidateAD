@@ -59,12 +59,18 @@ class App extends Component {
       });
   }
 
+  //Splits off Emails to create a new array
   _splitEmails(peopleArr) {
     let everyEmail = peopleArr.map(singleEmail => {
       return singleEmail.email_address;
     });
     console.log(everyEmail);
-    return everyEmail;
+    return this._countCharacterFrequency(everyEmail);
+  }
+
+  _countCharacterFrequency(emailArr) {
+    let giantEmailString = emailArr.join("");
+    console.log(giantEmailString);
   }
 }
 
