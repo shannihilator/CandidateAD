@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import axios from "axios";
 
 // COMPONENTS
 import Navigation from "./components/Navigation";
@@ -10,6 +11,12 @@ import Frequency from "./components/Frequency";
 import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      people: []
+    };
+  }
   render() {
     return (
       <Router>
@@ -20,6 +27,20 @@ class App extends Component {
         </div>
       </Router>
     );
+  }
+  //Wait for data to come back from API before mounting and setting state
+  componentDidMount() {
+    axios
+      .get("/api")
+      .then(res => {
+        console.log(res.data.data);
+        this.setState({
+          people: res.data.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 }
 
