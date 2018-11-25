@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // COMPONENTS
 import Navigation from "./components/Navigation";
+import AllUsers from "./components/AllUsers";
 
 // CSS
 import "./App.css";
@@ -13,7 +14,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navigation />
-          <h1>TODO: Mainbody</h1>
+          <Route exact path="/" component={AllUsers} />
         </div>
       </Router>
     );
