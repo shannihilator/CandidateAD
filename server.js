@@ -10,7 +10,20 @@ const axios = require("axios");
 
 //TEST
 app.get("/", (req, res) => {
-  res.send("Homepage Works!");
+  axios
+    .get("https://api.salesloft.com/v2/people.json", {
+      headers: {
+        contentType: "application/json",
+        Authorization: `Bearer` + ` ` + `${process.env.API_KEY}`
+      }
+    })
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  //   res.send("Homepage Works!");
 });
 
 //=====================================================
