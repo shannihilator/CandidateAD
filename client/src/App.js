@@ -75,6 +75,24 @@ class App extends Component {
     //Step 2: Split string into characters
     let characters = giantEmailString.split("");
     console.log(characters);
+
+    //Step 3: Iterate over array
+    let characterCount = {};
+    characters.forEach(c => {
+      //if characterCount already conatains that character, add another to the count
+      if (characterCount[c]) {
+        characterCount[c]++;
+      }
+      //else set that character's value to 1
+      else {
+        characterCount[c] = 1;
+      }
+    });
+
+    this.setState({
+      emailFrequency: characterCount
+    });
+    console.log(characterCount);
   }
 }
 
