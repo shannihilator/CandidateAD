@@ -8,7 +8,13 @@ const app = express();
 //IMPORT AXIOS
 const axios = require("axios");
 
-//TEST
+// ******************
+//  ROUTES
+// ******************
+// ========================================================
+//  GET ALL USERS
+// ========================================================
+
 app.get("/", (req, res) => {
   axios
     .get("https://api.salesloft.com/v2/people.json", {
@@ -18,15 +24,17 @@ app.get("/", (req, res) => {
       }
     })
     .then(response => {
-      console.log(response.data);
+      //   console.log(response.data);
+      res.send(response.data);
     })
     .catch(err => {
       console.log(err);
     });
-  //   res.send("Homepage Works!");
 });
 
-//=====================================================
+// ******************
+// SERVER SETUP
+// ******************
 app.listen(3500, () => {
   console.log("Your server is running on: 3500!");
 });
