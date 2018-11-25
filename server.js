@@ -35,6 +35,6 @@ app.get("/", (req, res) => {
 // ******************
 // SERVER SETUP
 // ******************
-app.listen(3500, () => {
-  console.log("Your server is running on: 3500!");
+app.listen(5000, () => {
+  console.log("Your server is running on: 5000!");
 });
