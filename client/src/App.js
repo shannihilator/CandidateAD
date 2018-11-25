@@ -29,7 +29,13 @@ class App extends Component {
               return <AllUsers people={this.state.people} {...props} />;
             }}
           />
-          <Route exact path="/frequency" component={Frequency} />
+          <Route
+            exact
+            path="/frequency"
+            render={props => {
+              return <Frequency people={this.state.people} {...props} />;
+            }}
+          />
         </div>
       </Router>
     );
@@ -39,7 +45,7 @@ class App extends Component {
     axios
       .get("/api")
       .then(res => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         this.setState({
           people: res.data.data
         });
