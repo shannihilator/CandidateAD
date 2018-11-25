@@ -1,19 +1,17 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 import { Link } from "react-router-dom";
 import OneUser from "./OneUser";
 
 class AllUsers extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      people: this.props
-    };
+    console.log(props);
   }
 
   render() {
-    //Loops through people array and creates a component for each person
-    let everyPerson = this.state.people.map(singlePerson => {
+    // Loops through people array and creates a component for each person
+    let everyPerson = this.props.people.map(singlePerson => {
       return (
         <OneUser
           key={singlePerson.id}
@@ -29,6 +27,7 @@ class AllUsers extends Component {
         <Link to={"/frequency"}>
           <button>Get Frequency</button>
         </Link>
+
         {everyPerson}
       </div>
     );
