@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import OneUser from "./OneUser";
 class AllUsers extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +28,7 @@ class AllUsers extends Component {
     let everyPerson = this.state.people.map(singlePerson => {
       return (
         <OneUser
-          key={singlePerson.account.id}
+          key={singlePerson.id}
           userName={singlePerson.display_name}
           jobTitle={singlePerson.title}
           email={singlePerson.email_address}
@@ -38,7 +38,7 @@ class AllUsers extends Component {
     return (
       <div>
         <h1>DISPLAYS ALL USERS</h1>
-        <p>{everyPerson}</p>
+        {everyPerson}
       </div>
     );
   }
