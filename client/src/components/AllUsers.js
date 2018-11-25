@@ -8,6 +8,16 @@ class AllUsers extends Component {
       people: []
     };
   }
+  componentDidMount() {
+    axios
+      .get("/")
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 
   render() {
     return (
