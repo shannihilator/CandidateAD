@@ -21,13 +21,15 @@ class AllUsers extends Component {
       );
     });
     return (
-      <div className="people">
+      <div>
         <h1> ALL USERS</h1>
-        <Link to={"/frequency"}>
-          <button>Get Frequency</button>
-        </Link>
 
-        {everyPerson}
+        <Link to={"/frequency"}>
+          <button className="button">
+            ***Click Here for Email Frequency***
+          </button>
+        </Link>
+        <div className="people">{everyPerson}</div>
       </div>
     );
   }
