@@ -18,16 +18,33 @@
 
 This app was part 3 of a code challenge for SalesLoft. The task was to build a simple web app that: 1. Show a list of People records that are available via the SalesLoft API using the API key in the email you received. Display each person’s name, email address, and job title. 2. Create a button that, when clicked, displays a frequency count of all the unique characters in all the email addresses of all the People you have access to, sorted by frequency count.
 
-<br>
+---
 
 ## The Approach:
 
 Step 1: Given the problem to solve, I began plan by wireframming and a general concept. Given a limited timeframe, I decided on a MVP, and then made a list of future additions.
+
+<br>
+
 Step 2: To build this app, I thought of a layered cake: start with the 'bottom' layer and work my way up. I set up the back end or the bottom layer, using Node.js and Express. I configured the API Key using the 'dotenv' module and tested requests to the API using Postman.
+
+<br>
+
 Step 3: After succesfully recieving a response from the SalesLoft API, I built the one route function I needed, which was to GET all the users, using axios to make the request.
+
+<br>
+
 Step 4. After the backend was set-up, I began to build out the frontend using React. I imported modules like react-router-dom in order to give the effect of a page to page experience. I first hard-coded the react components to be sure that it matched the layout I wanted. I then went back in from the top layer React component, being the App.js, and added functionality by building requests to the backend and then mutating the data once it was recieved on the front end and rendering it in the appropriate components.
+
+<br>
+
 Step 5. Once, I had the functionality I needed on the front end, the next step was to add styling. I made the application web-responsive and added a few media queries. Again, with the limited time, I made the MVP fairly basic design-wise.
+
+<br>
+
 Step 6. I would have liked to deploy to AWS, but due to the private nature of the information, I decided against it.
+
+---
 
 ## Built with:
 
@@ -37,15 +54,13 @@ Step 6. I would have liked to deploy to AWS, but due to the private nature of th
 - PostgreSQL
 - JavaScript
 
-<br>
-
-<br>
+---
 
 ## Minimum Viable Product:
 
 An app that displays a list of SalesLoft users and the frequency of characters represented in their emails.
 
-<br>
+---
 
 ## Obstacles
 
@@ -90,8 +105,8 @@ let giantEmailString = emailArr.join("");
 }
 
 ```
+---
 
-<br>
 
 ## Future Additions
 
@@ -101,5 +116,4 @@ let giantEmailString = emailArr.join("");
 - add more styling for a more user friendly experience
 
 <br>
-```
 ````
