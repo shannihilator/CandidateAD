@@ -6,3 +6,10 @@
   display: flex;
   outline: 1px royalblue solid;
 }
+
+.people {
+  border: 1px green solid;
+}
+.person-details {
+  outline: red 1px solid;
+}

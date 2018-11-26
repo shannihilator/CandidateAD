@@ -21,7 +21,7 @@ class AllUsers extends Component {
       );
     });
     return (
-      <div>
+      <div className="people">
         <h1> ALL USERS</h1>
         <Link to={"/frequency"}>
           <button>Get Frequency</button>

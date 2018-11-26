@@ -7,7 +7,7 @@ class OneUser extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="person-details">
         <p>{this.props.userName}</p>
         <p>{this.props.jobTitle}</p>
         <p>{this.props.email}</p>
