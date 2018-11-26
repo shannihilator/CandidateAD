@@ -12,7 +12,7 @@ class Frequency extends Component {
     // console.log(this.props.emails);
     //Loops over email and pulls out keys
     let entries = Object.entries(this.props.emails).map(k => {
-      return <OneFrequency />;
+      return <OneFrequency key={k[0]} letter={k[0]} number={k[1]} />;
     });
 
     return (
