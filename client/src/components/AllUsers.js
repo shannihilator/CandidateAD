@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-
 import { Link } from "react-router-dom";
 import OneUser from "./OneUser";
 
-class AllUsers extends Component {
-  constructor(props) {
-    super(props);
-  }
+//component to contain all users
 
+class AllUsers extends Component {
   render() {
     // Loops through people array and creates a component for each person
     let everyPerson = this.props.people.map(singlePerson => {
