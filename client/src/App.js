@@ -10,6 +10,7 @@ import Frequency from "./components/Frequency";
 // CSS
 import "./App.css";
 
+//MAIN COMPONENT
 class App extends Component {
   constructor(props) {
     super(props);
@@ -52,14 +53,14 @@ class App extends Component {
     axios
       .get("/api")
       .then(res => {
-        // console.log(res.data.data);
-
         this.setState({
           people: res.data.data
         });
         let split = this._splitEmails(this.state.people);
+        this.setState({
+          emailFrequency: split
+        });
       })
-
       .catch(err => {
         console.log(err);
       });
@@ -93,7 +94,7 @@ class App extends Component {
         characterCount[c] = 1;
       }
     });
-    console.log(characterCount);
+    // console.log(characterCount);
 
     return characterCount;
   }
