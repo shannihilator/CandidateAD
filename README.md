@@ -6,12 +6,13 @@
     2. git clone git@github.com:adebruyne/SL_Part_3.git
     3. cd SL_Part_3
     4. npm run serve
-        - you must provide your own API key and or a .env file or you will get an error that the app crashed
-        -this will start the backend server on port 5000
+        **you must provide your own API key and or a .env file or you will get an error that the app crashed**
+        -this command will start the backend server on port 5000
     5. In another terminal window, cd client
     6. npm run start
         -this will start React app on port 3000
-    ***This was not deployed due to the sensitivity of personal information.
+
+    ***This app was not deployed due to the sensitivity of personal information.
 
 ## The Mission:
 
