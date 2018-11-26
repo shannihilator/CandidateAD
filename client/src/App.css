@@ -9,6 +9,10 @@
   outline: 1px royalblue solid;
 }
 
+.h2-nav-item {
+  padding-top: 10px;
+}
+
 /* ********** AllUsers Component ********** */
 .people {
   display: flex;
