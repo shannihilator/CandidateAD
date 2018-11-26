@@ -5,11 +5,13 @@ class OneFrequency extends Component {
     super(props);
   }
   render() {
-    console.log(this.props);
     return (
-      <div>
-        <p>
-          {this.props.letter} : {this.props.number}
+      <div className="characters-div">
+        <p className="character-count">
+          Character: "<strong>{this.props.letter}</strong>"{" "}
+          <span className="seperator">|</span>
+          {"  "}
+          Count: <strong>{this.props.number}</strong>
         </p>
       </div>
     );
