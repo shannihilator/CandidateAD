@@ -11,7 +11,7 @@ class Navigation extends Component {
           className="d-inline-block align-top"
           alt="SalesLoft logo"
         />
-        <h2 className="h2-nav-item">SalesLoft People App</h2>
+        <h2 className="h2-nav-item">SalesLoft App</h2>
       </div>
     );
   }
