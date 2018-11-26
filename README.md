@@ -19,6 +19,7 @@
 This app was part 3 of a code challenge for SalesLoft. The task was to build a simple web app that: 1. Show a list of People records that are available via the SalesLoft API using the API key in the email you received. Display each person’s name, email address, and job title. 2. Create a button that, when clicked, displays a frequency count of all the unique characters in all the email addresses of all the People you have access to, sorted by frequency count.
 
 <br>
+
 ## The Approach:
 
 Step 1: Given the problem to solve, I began plan by wireframming and a general concept. Given a limited timeframe, I decided on a MVP, and then made a list of future additions.
