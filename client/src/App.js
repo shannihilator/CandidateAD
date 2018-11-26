@@ -15,7 +15,7 @@ class App extends Component {
     super(props);
     this.state = {
       people: [],
-      emailFrequency: {}
+      emailFrequency: []
     };
   }
   render() {
@@ -37,7 +37,7 @@ class App extends Component {
               return (
                 <Frequency
                   people={this.state.people}
-                  emailFrequency={this.state.emailFrequency}
+                  emails={this.state.emailFrequency}
                   {...props}
                 />
               );
@@ -57,7 +57,7 @@ class App extends Component {
         this.setState({
           people: res.data.data
         });
-        this._splitEmails(this.state.people);
+        let split = this._splitEmails(this.state.people);
       })
 
       .catch(err => {
@@ -70,7 +70,7 @@ class App extends Component {
     let everyEmail = peopleArr.map(singleEmail => {
       return singleEmail.email_address;
     });
-    console.log(everyEmail);
+
     return this._countCharacterFrequency(everyEmail);
   }
   //Recieves the email array to find occurances of characters
@@ -80,7 +80,6 @@ class App extends Component {
 
     //Step 2: Split string into characters
     let characters = giantEmailString.split("");
-    console.log(characters);
 
     //Step 3: Iterate over array
     let characterCount = {};
@@ -94,10 +93,9 @@ class App extends Component {
         characterCount[c] = 1;
       }
     });
+    console.log(characterCount);
 
-    this.setState({
-      emailFrequency: characterCount
-    });
+    return characterCount;
   }
 }
 
