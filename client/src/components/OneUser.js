@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-
+//Component to show One User's Information
 class OneUser extends Component {
-  constructor(props) {
-    super(props);
-    // console.log(props);
-  }
   render() {
     return (
       <div className="person-details">
