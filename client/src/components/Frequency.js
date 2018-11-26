@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import OneFrequency from "./OneFrequency";
 
 // Create a button that, when clicked, displays a frequency count of all the unique characters in all the email addresses of all the People you have access to, sorted by frequency count.
 
@@ -8,13 +9,16 @@ class Frequency extends Component {
   }
 
   render() {
-    console.log(this.props.emails);
-    let keys = Object.keys(this.props.emails);
+    // console.log(this.props.emails);
+    //Loops over email and pulls out keys
+    let entries = Object.entries(this.props.emails).map(k => {
+      return <OneFrequency />;
+    });
 
     return (
       <div>
         <h1>TODO: SHOW FREQUENCY OF LETTERS FROM USERS</h1>
-        <p>{keys}</p>
+        {entries}
       </div>
     );
   }
