@@ -67,46 +67,7 @@ An app that displays a list of SalesLoft users and the frequency of characters r
 _Obstacle -_
 One of the challenges I faced was splitting up the emails to count the frequency. I'm sure there was a faster, more effiecient way to do this, but I decided to break it down into smaller steps in order to keep track of each function.
 
-````
-
-//Splits off Emails to create a new array
-\_splitEmails(peopleArr) {
-let everyEmail = peopleArr.map(singleEmail => {
-return singleEmail.email_address;
-});
-
-    return this._countCharacterFrequency(everyEmail);
-
-}
-//Recieves the email array to find occurances of characters
-\_countCharacterFrequency(emailArr) {
-//Step 1: Turn Array into one long string
-let giantEmailString = emailArr.join("");
-
-    //Step 2: Split string into characters
-    let characters = giantEmailString.split("");
-
-    //Step 3: Iterate over array
-    let characterCount = {};
-    characters.forEach(c => {
-      //if characterCount already conatains that character, add another to the count
-      if (characterCount[c]) {
-        characterCount[c]++;
-      }
-      //else set that character's value to 1
-      else {
-        characterCount[c] = 1;
-      }
-    });
-    // console.log(characterCount);
-
-    return characterCount;
-
-}
-
-```
----
-
+<p align="center"><img src="/readme_imgs/function.png"/></p>
 
 ## Future Additions
 
