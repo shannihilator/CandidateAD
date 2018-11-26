@@ -1,12 +1,15 @@
 .App {
   text-align: center;
 }
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+}
 
 /* ********** NAV BAR  ********** */
 
 .my-nav {
   display: flex;
-  outline: 1px royalblue solid;
+  border: 2px rgb(74, 147, 204) solid;
 }
 
 .h2-nav-item {
