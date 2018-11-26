@@ -38,7 +38,7 @@ Step 4. After the backend was set-up, I began to build out the frontend layer us
 
 <br>
 
-Step 5. Once, I had the functionality I needed on the front end, the next layer was to add styling. I made the application web-responsive and added some styling, so that it wasn't too ugly. Again, with the limited time, I made the MVP fairly basic, design-wise. Altogether, this app is like an ugly,layered cake, looking from the user stand point. But I hope you'll agree that the code inside is pretty tasty!
+Step 5. Once, I had the functionality I needed on the front end, the next layer was to add styling. I made the application web-responsive and added some styling, so that it wasn't too ugly. Again, with the limited time, I made the MVP fairly basic, design-wise. Altogether - looking from the user stand point - this app is like a basic, ugly, layered cake. But I hope you'll agree, that the code inside is pretty tasty! Thanks for checking it out!
 
 <br>
 
