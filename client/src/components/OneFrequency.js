@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 //Component to Show One Character's Frequency
 class OneFrequency extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="characters-div">
