@@ -22,7 +22,7 @@ This app was part 3 of a code challenge for SalesLoft. The task was to build a s
 
 ## The Approach:
 
-Step 1: Given the problem to solve, I began plan by wireframming and a general concept. Given a limited timeframe, I decided on a MVP, and then made a list of future additions.
+Step 1: Given the problem to solve, I began plan by wireframming a general concept. Given a limited timeframe, I decided on a MVP, and then made a list of future additions.
 
 <br>
 
@@ -30,15 +30,15 @@ Step 2: To build this app, I thought of a layered cake: start with the 'bottom' 
 
 <br>
 
-Step 3: After succesfully recieving a response from the SalesLoft API, I built the one route function I needed, which was to GET all the users, using axios to make the request.
+Step 3: After succesfully recieving a response from the SalesLoft API, I built the next layer. I only needed one route, which was an http request to GET all the users, using axios to make the request.
 
 <br>
 
-Step 4. After the backend was set-up, I began to build out the frontend using React. I imported modules like react-router-dom in order to give the effect of a page to page experience. I first hard-coded the react components to be sure that it matched the layout I wanted. I then went back in from the top layer React component, being the App.js, and added functionality by building requests to the backend and then mutating the data once it was recieved on the front end and rendering it in the appropriate components.
+Step 4. After the backend was set-up, I began to build out the frontend layer using React. I imported modules like react-router-dom, in order to give the effect of a page to page experience. I first hard-coded the react components to be sure that it matched the layout I wanted. I then went back in from the top layer React component, being the App.js, and added functionality by building requests to the backend. When the backend delivered a response, I then captured the data I needed on the front end and rendered it in the appropriate components.
 
 <br>
 
-Step 5. Once, I had the functionality I needed on the front end, the next step was to add styling. I made the application web-responsive and added a few media queries. Again, with the limited time, I made the MVP fairly basic design-wise.
+Step 5. Once, I had the functionality I needed on the front end, the next layer was to add styling. I made the application web-responsive and added some styling, so that it wasn't too ugly. Again, with the limited time, I made the MVP fairly basic, design-wise. Altogether, this app is like an ugly,layered cake, looking from the user stand point. But I hope you'll agree that the code inside is pretty tasty!
 
 <br>
 
@@ -53,6 +53,8 @@ Step 6. I would have liked to deploy to AWS, but due to the private nature of th
 - Express
 - PostgreSQL
 - JavaScript
+- Postman
+- Axios
 
 ---
 
