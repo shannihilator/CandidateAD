@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Navigation extends Component {
   render() {
@@ -11,7 +12,9 @@ class Navigation extends Component {
           className="d-inline-block align-top"
           alt="SalesLoft logo"
         />
-        <h2 className="h2-nav-item">SalesLoft App</h2>
+        <Link to="/">
+          <h2 className="h2-nav-item">SalesLoft App</h2>
+        </Link>
       </div>
     );
   }
